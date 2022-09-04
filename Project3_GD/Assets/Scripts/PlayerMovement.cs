@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //Simple x and y 2d movement of the player
         movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        movement.z = Input.GetAxisRaw("Vertical");
     }
 
     private void FixedUpdate()
