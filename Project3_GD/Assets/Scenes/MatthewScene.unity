@@ -1244,7 +1244,8 @@ GameObject:
   - component: {fileID: 1417083338}
   - component: {fileID: 1417083337}
   - component: {fileID: 1417083336}
-  - component: {fileID: 1417083335}
+  - component: {fileID: 1417083340}
+  - component: {fileID: 1417083341}
   m_Layer: 0
   m_Name: ItemWorldSpawner_Grass
   m_TagString: Untagged
@@ -1252,21 +1253,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1417083335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417083334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16c059ec946338141933061ef0973e92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item:
-    itemType: 2
-    amount: 1
 --- !u!65 &1417083336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1345,6 +1331,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1417083340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417083334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c059ec946338141933061ef0973e92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemType: 2
+    amount: 1
+--- !u!114 &1417083341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417083334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db25a939d8f8d748b572e2c92e1448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1418990319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,7 +1454,8 @@ GameObject:
   - component: {fileID: 1490277956}
   - component: {fileID: 1490277955}
   - component: {fileID: 1490277954}
-  - component: {fileID: 1490277953}
+  - component: {fileID: 1490277958}
+  - component: {fileID: 1490277959}
   m_Layer: 0
   m_Name: ItemWorldSpawner_Wood
   m_TagString: Untagged
@@ -1449,21 +1463,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1490277953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1490277952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16c059ec946338141933061ef0973e92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item:
-    itemType: 1
-    amount: 1
 --- !u!65 &1490277954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1542,6 +1541,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1490277958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490277952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c059ec946338141933061ef0973e92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    itemType: 1
+    amount: 1
+--- !u!114 &1490277959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490277952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db25a939d8f8d748b572e2c92e1448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1564643856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1766,6 +1792,7 @@ GameObject:
   - component: {fileID: 2114809201}
   - component: {fileID: 2114809200}
   - component: {fileID: 2114809204}
+  - component: {fileID: 2114809205}
   m_Layer: 0
   m_Name: ItemWorldSpawner_Mushroom
   m_TagString: Untagged
@@ -1866,6 +1893,18 @@ MonoBehaviour:
   item:
     itemType: 0
     amount: 1
+--- !u!114 &2114809205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114809199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db25a939d8f8d748b572e2c92e1448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2144983395
 GameObject:
   m_ObjectHideFlags: 0

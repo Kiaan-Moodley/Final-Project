@@ -32,7 +32,7 @@ public class Item
         switch (itemType)
         {
             default:
-            case ItemType.Mushroom: return true;
+            case ItemType.Mushroom: return false;
             case ItemType.Grass: return true;
             case ItemType.Wood: return true;
         }

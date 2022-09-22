@@ -15,17 +15,10 @@ public class ItemWorld : MonoBehaviour
     }
 
     private Item item;
-    private GameObject spriteRenderer;
 
-
-    private void Awake()
-    {
-        spriteRenderer = GetComponent<GameObject>(); 
-    }
     public void SetItem(Item item)
     {
         this.item = item;
- 
     }
 
     public Item GetItem()
@@ -37,4 +30,5 @@ public class ItemWorld : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
 }

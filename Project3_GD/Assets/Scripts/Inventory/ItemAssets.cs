@@ -18,5 +18,4 @@ public class ItemAssets : MonoBehaviour
     public Sprite mushroomSprite;
     public Sprite woodSprite;
     public Sprite grassSprite;
-
 }
