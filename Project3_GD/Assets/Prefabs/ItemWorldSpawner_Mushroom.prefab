@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3029212724370305434}
   - component: {fileID: 3029212724370305433}
-  - component: {fileID: 3029212724370305437}
-  - component: {fileID: 3029212724370305436}
   - component: {fileID: 6465326642323217039}
   m_Layer: 0
   m_Name: ItemWorldSpawner_Mushroom
@@ -48,33 +46,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.67968845, y: 0.70386136, z: 0.058726564}
   m_Center: {x: 0.0028067827, y: 0.018071353, z: 0.0056891437}
---- !u!114 &3029212724370305437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3029212724370305414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16c059ec946338141933061ef0973e92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item:
-    itemType: 0
-    amount: 1
---- !u!114 &3029212724370305436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3029212724370305414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4db25a939d8f8d748b572e2c92e1448f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &6465326642323217039
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2284249233839240609}
   - component: {fileID: 2284249233839240608}
   - component: {fileID: 2284249233839240611}
-  - component: {fileID: 2284249233839240612}
   m_Layer: 0
   m_Name: TestItem 2
   m_TagString: Untagged
@@ -115,15 +114,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 96
   m_CollisionDetection: 0
---- !u!114 &2284249233839240612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2284249233839240610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4779ed1bca5c85d4e8d72d3a11daace7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
