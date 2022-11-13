@@ -14,10 +14,12 @@ public class Interactable : MonoBehaviour
 
     public Transform interactionTransform;
 
+    public GameObject storage;
+
     //Triggers methods but can be overwritten by using other scripts such as enemy and Item scripts
     public virtual void Interact()
     {
-        Debug.Log("Interacting with " + transform.name);
+        
     }
 
     void Update()
@@ -46,6 +48,7 @@ public class Interactable : MonoBehaviour
         isFocus = false;
         player = null;
         hasInteracted = false;
+        storage.SetActive(false); 
     }
 
     private void OnDrawGizmosSelected()
