@@ -138,4 +138,73 @@ public class Inventory : MonoBehaviour
             return false;
         }
     }
+
+
+
+    // Wooden Plank Crafting check
+    public void CheckWood()
+    {
+        foreach (Item itm in items)
+        {
+
+            if (itm.ToString() == "WoodTest (Item)")
+            {
+                counter++;
+            }
+            else
+            {
+                counter = 0;
+            }
+        }
+    }
+
+    public bool CheckToMakeWoodenPlank()
+    {
+        if (counter == 5)
+        {
+            counter = 0;
+            return true;
+        }
+        else
+        {
+            //Debug.Log("");
+            //Debug.Log(counter);
+            counter = 0;
+            return false;
+        }
+    }
+
+    public void CheckWoodenPlank()
+    {
+        foreach (Item itm in items)
+        {
+
+            if (itm.ToString() == "WoodPlankTest (Item)")
+            {
+                counter++;
+            }
+            else
+            {
+                counter = 0;
+            }
+        }
+    }
+
+
+    public bool CheckToMakeWoodenLog()
+    {
+        if (counter == 5)
+        {
+
+            counter = 0;
+            return true;
+        }
+        else
+        {
+            //Debug.Log("");
+            //Debug.Log(counter);
+            counter = 0;
+            return false;
+        }
+    }
 }
