@@ -4,71 +4,76 @@ using UnityEngine;
 
 public class CustomizeObjectScript : MonoBehaviour
 {
-    public List<Customization> customizations;
-    int _currentCustomizationIndex;
-
-    public Customization CurrentCustomization { get; private set; }
-
-    private void Awake()
+    private SpriteRenderer rend;
+    private Sprite one, three;
+    
+    private void Start()
     {
-        foreach (var customization in customizations)
+        rend = GetComponent<SpriteRenderer>();
+        one = Resources.Load<Sprite>("character1");
+        three = Resources.Load<Sprite>("CHARACTER4");
+        rend.sprite = one;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
         {
-            customization.UpdateRenderers();
+            if (rend.sprite == one)
+                rend.sprite = three;
+            else if (rend.sprite == three)
+                rend.sprite = one;
         }
     }
 
-    void Update()
-    {
-        SelectCustomization();
+     /*
+     int _currentCustomizationIndex;
+     SpriteRenderer SpriteR;
+     public List<Sprite> Sprites;
+     public Customization Currentcustomization { get; private set; }
 
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            CurrentCustomization.NextMaterial();
-        }
-    }
+     private void Start()
+     {
+         SpriteR = child.GetComponent<SpriteRenderer>();
+     }
 
-    void SelectCustomization()
-    {
-        if(Input.GetKeyDown(KeyCode.C))
-        {
-            _currentCustomizationIndex++;
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            _currentCustomizationIndex--;
-        }
-        if (_currentCustomizationIndex < 0)
-        {
-            _currentCustomizationIndex = customizations.Count -1;
-        }
-        if (_currentCustomizationIndex >= customizations.Count)
-        {
-            _currentCustomizationIndex = 0;
-        }
-        CurrentCustomization = customizations[_currentCustomizationIndex];
-    }
+     void LateUpdate()
+     {
+         SkinChoice();
+         if (Input.GetKeyDown(KeyCode.C))
+         {
+             _currentCustomizationIndex++;
+            Currentcustomization.NextSprite();
+         }
 
-    [System.Serializable]
-    public class Customization
-    {
-        public List<Renderer> renderers;
-        public List<Material> materials;
-        int _materialIndex;
+     }
 
-        public void NextMaterial()
-        {
-            _materialIndex++;
-            if (_materialIndex >= materials.Count)
-                _materialIndex = 0;
+     void SkinChoice()
+     {
+         if (_currentCustomizationIndex > Sprites.Count - 1)
+         {
+             _currentCustomizationIndex = 0;
+         }
+         else if (_currentCustomizationIndex < 0)
+         {
+             _currentCustomizationIndex = Sprites.Count - 1;
+         }
+     }
 
-            UpdateRenderers();
-        }
+     [System.Serializable]
+     public class Customization
+     {
+         public List<Sprite> Renders;
+         int index;
 
-        public void UpdateRenderers()
-        {
-            foreach (var renderer in renderers)
-                if (renderer)
-                    renderer.material = materials[_materialIndex];
-        }
-    }
+         public void NextSprite()
+         {
+             index++;
+             if (index >= Renders.Count-1)
+                 index = 0;
+
+         }
+
+
+     }*/
 }

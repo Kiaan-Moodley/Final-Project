@@ -9,6 +9,5 @@ public class LockRotationScript : MonoBehaviour
     void Update()
     {
         child.transform.rotation = Quaternion.Euler(55f, 180f, gameObject.transform.rotation.z * -1.0f);
-
     }
 }
