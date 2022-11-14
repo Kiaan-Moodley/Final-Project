@@ -2,12 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(TimeAgent))]
+
 public class itemSpawner : MonoBehaviour
 {
     [SerializeField] Item toSpawn;
     [SerializeField] int count;
     [SerializeField] float spread = 2f;
     [SerializeField] float prob = 0.5f;
+
+    private void Start()
+    {
+        TimeAgent timeAgent = GetComponent<TimeAgent>();
+        timeAgent.onTimeTick += Spawn;
+    }
+
     void Spawn()
     {
         if (UnityEngine.Random.value < prob)

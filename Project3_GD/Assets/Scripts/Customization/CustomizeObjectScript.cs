@@ -5,13 +5,14 @@ using UnityEngine;
 public class CustomizeObjectScript : MonoBehaviour
 {
     private SpriteRenderer rend;
-    private Sprite one, three;
+    private Sprite one, three, two;
     
     private void Start()
     {
         rend = GetComponent<SpriteRenderer>();
         one = Resources.Load<Sprite>("character1");
         three = Resources.Load<Sprite>("CHARACTER4");
+        two = Resources.Load<Sprite>("characte2");
         rend.sprite = one;
     }
 
@@ -22,6 +23,8 @@ public class CustomizeObjectScript : MonoBehaviour
             if (rend.sprite == one)
                 rend.sprite = three;
             else if (rend.sprite == three)
+                rend.sprite = two;
+            else if (rend.sprite == two)
                 rend.sprite = one;
         }
     }
