@@ -26,6 +26,7 @@ public class Inventory : MonoBehaviour
     public List<Item> items = new List<Item>();
 
     public int space = 5;
+    int counter = 0;
 
     public bool Add(Item item)
     {
@@ -51,5 +52,90 @@ public class Inventory : MonoBehaviour
         if (onItemChangeCallBack != null)
             onItemChangeCallBack.Invoke();
 
+    }
+    public bool CheckItem()
+    {
+        if (items.Count < 5)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public void RemoveFromInventory()
+    {
+        items.Clear();
+    }
+
+    // Mushroom Crafting check
+    public void CheckMushrooms()
+    {
+        foreach (Item itm in items)
+        {
+
+            if (itm.ToString() == "MushroomTest (Item)")
+            {
+                counter++;
+            }
+            else
+            {
+                counter = 0;
+            }
+        }
+    }
+
+    public bool CheckToMakeMushroomStew()
+    {
+        if (counter == 5)
+        {
+            counter = 0;
+            return true;
+        }
+        else
+        {
+            //Debug.Log("");
+            //Debug.Log(counter);
+            counter = 0;
+            return false;
+        }
+    }
+
+
+    //Pot of Mushroom Stew
+    public void CheckMushroomStew()
+    {
+        foreach (Item itm in items)
+        {
+
+            if (itm.ToString() == "MushroomStewTest (Item)")
+            {
+                counter++;
+            }
+            else
+            {
+                counter = 0;
+            }
+        }
+    }
+
+ 
+    public bool CheckToMakePotOfMushroomStew()
+    {
+        if (counter == 5)
+        {
+
+            counter = 0;
+            return true;
+        }
+        else
+        {
+            //Debug.Log("");
+            //Debug.Log(counter);
+            counter = 0;
+            return false;
+        }
     }
 }
