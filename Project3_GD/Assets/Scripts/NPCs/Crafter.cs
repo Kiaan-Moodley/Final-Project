@@ -8,6 +8,8 @@ public class Crafter : Interactable
     public Item itemTwo;
     public Item itemThree;
     public Item itemFour;
+    public Item itemFive;
+    public Item itemSix;
 
     public InventorySlot one;
     public InventorySlot two;
@@ -23,6 +25,8 @@ public class Crafter : Interactable
         TalkingToTwo();
         TalkingToThree();
         TalkingToFour();
+        TalkingToFive();
+        TalkingToSix();
 
     }
 
@@ -135,6 +139,64 @@ public class Crafter : Interactable
 
                 one.AddItem(itemFour);
                 Inventory.instance.Add(itemFour);
+            }
+
+
+        }
+
+    }
+
+    void TalkingToFive()
+    {
+
+
+        bool hasFiveItems = Inventory.instance.CheckItem();
+
+        if (hasFiveItems == true)
+        {
+            Inventory.instance.CheckStone();
+
+            if (Inventory.instance.CheckToMakeGravel() == true)
+            {
+                Inventory.instance.RemoveFromInventory();
+
+                one.ClearSlot();
+                two.ClearSlot();
+                three.ClearSlot();
+                four.ClearSlot();
+                five.ClearSlot();
+
+                one.AddItem(itemFive);
+                Inventory.instance.Add(itemFive);
+            }
+
+
+        }
+
+    }
+
+    void TalkingToSix()
+    {
+
+
+        bool hasFiveItems = Inventory.instance.CheckItem();
+
+        if (hasFiveItems == true)
+        {
+            Inventory.instance.CheckGravel();
+
+            if (Inventory.instance.CheckToMakeCement() == true)
+            {
+                Inventory.instance.RemoveFromInventory();
+
+                one.ClearSlot();
+                two.ClearSlot();
+                three.ClearSlot();
+                four.ClearSlot();
+                five.ClearSlot();
+
+                one.AddItem(itemSix);
+                Inventory.instance.Add(itemSix);
             }
 
 

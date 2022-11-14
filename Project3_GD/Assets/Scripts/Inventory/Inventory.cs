@@ -207,4 +207,74 @@ public class Inventory : MonoBehaviour
             return false;
         }
     }
+
+
+
+    // Stone Crafting check
+    public void CheckStone()
+    {
+        foreach (Item itm in items)
+        {
+
+            if (itm.ToString() == "StoneTest (Item)")
+            {
+                counter++;
+            }
+            else
+            {
+                counter = 0;
+            }
+        }
+    }
+
+    public bool CheckToMakeGravel()
+    {
+        if (counter == 5)
+        {
+            counter = 0;
+            return true;
+        }
+        else
+        {
+            //Debug.Log("");
+            //Debug.Log(counter);
+            counter = 0;
+            return false;
+        }
+    }
+
+
+
+    // Gravel Crafting check
+    public void CheckGravel()
+    {
+        foreach (Item itm in items)
+        {
+
+            if (itm.ToString() == "GravelTest (Item)")
+            {
+                counter++;
+            }
+            else
+            {
+                counter = 0;
+            }
+        }
+    }
+
+    public bool CheckToMakeCement()
+    {
+        if (counter == 5)
+        {
+            counter = 0;
+            return true;
+        }
+        else
+        {
+            //Debug.Log("");
+            //Debug.Log(counter);
+            counter = 0;
+            return false;
+        }
+    }
 }
