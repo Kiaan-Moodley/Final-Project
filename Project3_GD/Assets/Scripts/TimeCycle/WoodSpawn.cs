@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class WoodSpawn : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject spawnee;
+    private float maxt = 10f;
+    private float crt;
+
     void Start()
     {
-        
+        crt = maxt;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        Timer();
+    }
+
+    void Timer()
+    {
+        if (crt > 0)
+        {
+            crt -= Time.deltaTime;
+        }
+        else
+        {
+            Spawn();
+            crt = maxt;
+        }
+    }
+
+    void Spawn()
+    {
+        Instantiate(spawnee, transform.position, transform.rotation);
     }
 }
