@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: WoodPlankTest
   m_EditorClassIdentifier: 
   name: Wooden Plank
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 477f09d6a1088764f94a19df1c8fd3fb, type: 3}
   isDefaultItem: 0

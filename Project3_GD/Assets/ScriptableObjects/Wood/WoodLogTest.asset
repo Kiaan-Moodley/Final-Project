@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: WoodLogTest
   m_EditorClassIdentifier: 
   name: Wooden Log
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 9a1b5414c39705f40b2304e9d2a297e2, type: 3}
   isDefaultItem: 0

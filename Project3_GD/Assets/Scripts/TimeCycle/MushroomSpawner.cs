@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class MushroomSpawner : MonoBehaviour
 {
-    public GameObject spawnee;
+    public GameObject spawn;
+    float maxtim;
+    private float crt;
 
     void Start()
     {
-        Instantiate(spawnee, transform.position, transform.rotation);
+        maxtim = Random.Range(60f, 200f);
+        crt = maxtim;
     }
 
     void Update()
     {
+        Timer();
+    }
 
+    void Timer()
+    {
+        if (crt > 0)
+        {
+            crt -= Time.deltaTime;
+        }
+        else
+        {
+            Spawn();
+            crt = maxtim;
+        }
+    }
+
+    void Spawn()
+    {
+        Instantiate(spawn, transform.position, transform.rotation);
     }
 }

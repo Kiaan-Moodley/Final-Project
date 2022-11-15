@@ -113,7 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   interactionTransform: {fileID: 7790271681907124418}
-  storage: {fileID: 0}
+  storage: {fileID: 5184081327551739100, guid: d7be8d0655edc9b469c3e05b390f9b8f, type: 3}
   count: 1
   item: {fileID: 11400000, guid: be6e30d56c5b6ba46b2b02c808d6186e, type: 2}
 --- !u!1001 &7421026924941227433

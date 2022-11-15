@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CementTest
   m_EditorClassIdentifier: 
   name: Cement
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: db1cb2dac7ffb9c469a2af8a2215b324, type: 3}
   isDefaultItem: 0

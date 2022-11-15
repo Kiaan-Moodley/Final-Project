@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MushroomStewTest
   m_EditorClassIdentifier: 
   name: Mushroom Stew
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 60250536b8284634eb5c47d0391726d3, type: 3}
   isDefaultItem: 0

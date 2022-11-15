@@ -5,11 +5,12 @@ using UnityEngine;
 public class WoodSpawn : MonoBehaviour
 {
     public GameObject spawnee;
-    private float maxt = 10f;
+    float maxt;
     private float crt;
 
     void Start()
     {
+        maxt = Random.Range(120f, 400f);
         crt = maxt;
     }
 

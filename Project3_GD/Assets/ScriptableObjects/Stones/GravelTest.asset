@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GravelTest
   m_EditorClassIdentifier: 
   name: Gravel
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: c549e58b4d32c364cafb8804d131bf02, type: 3}
   isDefaultItem: 0

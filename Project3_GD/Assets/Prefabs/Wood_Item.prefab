@@ -113,7 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   interactionTransform: {fileID: 5427630188974695379}
-  storage: {fileID: 0}
+  storage: {fileID: 5184081327551739100, guid: d7be8d0655edc9b469c3e05b390f9b8f, type: 3}
   count: 1
   item: {fileID: 11400000, guid: 13191798462614d4b9ebde4f6db2b1d2, type: 2}
 --- !u!1001 &187196287598893670
@@ -129,11 +129,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1223770561548568242, guid: 0e29083f1dad87e489342fb4674f5e82, type: 3}
       propertyPath: m_LocalScale.x
-      value: 8
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1223770561548568242, guid: 0e29083f1dad87e489342fb4674f5e82, type: 3}
       propertyPath: m_LocalScale.y
-      value: 8
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223770561548568242, guid: 0e29083f1dad87e489342fb4674f5e82, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1223770561548568242, guid: 0e29083f1dad87e489342fb4674f5e82, type: 3}
       propertyPath: m_LocalPosition.x
@@ -178,6 +182,22 @@ PrefabInstance:
     - target: {fileID: 1223770561548568247, guid: 0e29083f1dad87e489342fb4674f5e82, type: 3}
       propertyPath: m_Name
       value: ItemWorldSpawner_Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309117086572058072, guid: 0e29083f1dad87e489342fb4674f5e82, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d39fa7c9b0bc0f9449c92ffa956e4e00, type: 3}
+    - target: {fileID: 2309117086572058072, guid: 0e29083f1dad87e489342fb4674f5e82, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9575472
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309117086572058072, guid: 0e29083f1dad87e489342fb4674f5e82, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9870049
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309117086572058072, guid: 0e29083f1dad87e489342fb4674f5e82, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2309117086572058072, guid: 0e29083f1dad87e489342fb4674f5e82, type: 3}
       propertyPath: m_Materials.Array.data[0]
