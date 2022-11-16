@@ -996,7 +996,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2817,7 +2817,6 @@ Transform:
   - {fileID: 1761662461}
   - {fileID: 1922570429}
   - {fileID: 1616506248}
-  - {fileID: 2127623666}
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5425,7 +5424,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -48.350006, y: -35.39}
-  m_SizeDelta: {x: 85.105286, y: 48.453705}
+  m_SizeDelta: {x: 82, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &840297716
 MonoBehaviour:
@@ -5503,7 +5502,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 1df1d828207c4044f9faa0a0d275b3ef, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6366,15 +6365,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Next
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 53104ceea175235438edb7d621e131d4, type: 2}
+  m_sharedMaterial: {fileID: -8675016564994480436, guid: 53104ceea175235438edb7d621e131d4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6459,10 +6458,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Crafter
+    name: Creg The Crafter
     sentences:
-    - Hello
-    - How are you
+    - Oh Yay! Some Mushrooms!
+    - Take this as thanks..
 --- !u!114 &981217979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6476,10 +6475,79 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Crafter
+    name: Creg the Crafter
     sentences:
-    - Thank you for the wood
-    - Here is a plank
+    - So much..
+    - Here, take some with you
+--- !u!114 &981217985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981217972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dc735b508ca6247accb711681a0013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Creg the Crafter
+    sentences:
+    - Thanks for the Wood!
+    - Here I'll give you a plank
+--- !u!114 &981217986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981217972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69a533929ccb7b342b7b763bcfb95abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Creg the Crafter
+    sentences:
+    - Oh wow! 5 Wooden Planks!
+    - What? You want a frame?
+    - Uh.. take whatever this is..
+--- !u!114 &981217987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981217972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17bee2bd9a2566c4cbe9e24383d409b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Creg the Crafter
+    sentences:
+    - All of this together make..
+    - Cement!!
+--- !u!114 &981217988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981217972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 740d1cb0aea5ecd40bac24d993eda7a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Creg the Crafter
+    sentences:
+    - Stones?
+    - Here, this is what I made from it..
 --- !u!1001 &983123277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7801,15 +7869,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Close
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 53104ceea175235438edb7d621e131d4, type: 2}
+  m_sharedMaterial: {fileID: -8675016564994480436, guid: 53104ceea175235438edb7d621e131d4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8200,7 +8268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1335602791
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8222,8 +8290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 144, y: 80}
-  m_SizeDelta: {x: -354.48, y: -278.2233}
+  m_AnchoredPosition: {x: 4, y: 46}
+  m_SizeDelta: {x: -552.2587, y: -278.2233}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1335602792
 MonoBehaviour:
@@ -8238,7 +8306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.4627451, g: 0.16862746, b: 0, a: 0.54901963}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10002,6 +10070,64 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5427630188974695379, guid: d1fb7b42e8b6cbc4ebe965bd634d6b3e, type: 3}
   m_PrefabInstance: {fileID: 906713044}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1593940681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 812967532967609801, guid: 44eaa69c5b346b343ac94893e25bfd01, type: 3}
+  m_PrefabInstance: {fileID: 812967531475037936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1593940687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593940681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0f8edc361521ba45b9e979fae276911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Terry the Trader
+    sentences:
+    - STONES
+    - STONES
+    - ....Take this and never return
+--- !u!114 &1593940688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593940681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 170e2e75bf84e98479abcdee6f1b155d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Terry the Trader
+    sentences:
+    - Ugh, just Wood
+    - Take this junk
+--- !u!114 &1593940689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593940681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74fdb986c2e7ee5468151a8c6be5c853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Terry the Trader
+    sentences:
+    - Gimme!
+    - Here.
+    - Now get outta here..
 --- !u!1 &1608174181
 GameObject:
   m_ObjectHideFlags: 0
@@ -11632,7 +11758,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -48.350006, y: 31}
-  m_SizeDelta: {x: 85.105286, y: 48.453705}
+  m_SizeDelta: {x: 82, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1881742295
 MonoBehaviour:
@@ -11710,7 +11836,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 1df1d828207c4044f9faa0a0d275b3ef, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13522,90 +13648,6 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: b97befef81921e544906003878d208ae, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08d05571a4e433a4b8b41c8626c31d36, type: 3}
---- !u!1 &2127623664
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2127623666}
-  - component: {fileID: 2127623665}
-  m_Layer: 0
-  m_Name: mpc2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &2127623665
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127623664}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: c4ad91e4bde47df48930095234ed8d49, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a909b4902c5c58142a693f34b9c81e6b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &2127623666
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2127623664}
-  m_LocalRotation: {x: -0, y: 0.8870109, z: -0.46174863, w: 0}
-  m_LocalPosition: {x: 9.644157, y: 0.4678875, z: 4.7272315}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 409064481}
-  m_RootOrder: 67
-  m_LocalEulerAnglesHint: {x: 55, y: 180, z: 0}
 --- !u!1 &2137059750
 GameObject:
   m_ObjectHideFlags: 0
@@ -13778,6 +13820,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: TraderTest
       objectReference: {fileID: 0}
+    - target: {fileID: 812967532967609802, guid: 44eaa69c5b346b343ac94893e25bfd01, type: 3}
+      propertyPath: d1
+      value: 
+      objectReference: {fileID: 1593940689}
+    - target: {fileID: 812967532967609802, guid: 44eaa69c5b346b343ac94893e25bfd01, type: 3}
+      propertyPath: d2
+      value: 
+      objectReference: {fileID: 1593940688}
+    - target: {fileID: 812967532967609802, guid: 44eaa69c5b346b343ac94893e25bfd01, type: 3}
+      propertyPath: d3
+      value: 
+      objectReference: {fileID: 1593940687}
     - target: {fileID: 812967532967609802, guid: 44eaa69c5b346b343ac94893e25bfd01, type: 3}
       propertyPath: one
       value: 
@@ -14154,13 +14208,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1335602790}
     - target: {fileID: 1441771702264714344, guid: 8190d060c2ed9c9469453f0fab18ac52, type: 3}
+      propertyPath: dialogueSix
+      value: 
+      objectReference: {fileID: 981217987}
+    - target: {fileID: 1441771702264714344, guid: 8190d060c2ed9c9469453f0fab18ac52, type: 3}
       propertyPath: dialogueTwo
       value: 
       objectReference: {fileID: 981217979}
     - target: {fileID: 1441771702264714344, guid: 8190d060c2ed9c9469453f0fab18ac52, type: 3}
+      propertyPath: dialogueFive
+      value: 
+      objectReference: {fileID: 981217988}
+    - target: {fileID: 1441771702264714344, guid: 8190d060c2ed9c9469453f0fab18ac52, type: 3}
+      propertyPath: dialogueFour
+      value: 
+      objectReference: {fileID: 981217986}
+    - target: {fileID: 1441771702264714344, guid: 8190d060c2ed9c9469453f0fab18ac52, type: 3}
       propertyPath: dialogue.name
       value: Craig the Crafter
       objectReference: {fileID: 0}
+    - target: {fileID: 1441771702264714344, guid: 8190d060c2ed9c9469453f0fab18ac52, type: 3}
+      propertyPath: dialogueThree
+      value: 
+      objectReference: {fileID: 981217985}
     - target: {fileID: 1441771702264714344, guid: 8190d060c2ed9c9469453f0fab18ac52, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 3

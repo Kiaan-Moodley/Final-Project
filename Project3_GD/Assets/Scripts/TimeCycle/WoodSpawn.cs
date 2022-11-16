@@ -10,7 +10,7 @@ public class WoodSpawn : MonoBehaviour
 
     void Start()
     {
-        maxt = Random.Range(1f, 4f);
+        maxt = Random.Range(120f, 400f);
         crt = maxt;
     }
 

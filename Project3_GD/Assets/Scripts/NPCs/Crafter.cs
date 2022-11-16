@@ -9,6 +9,10 @@ public class Crafter : Interactable
 
     public DialogueTrigger dialogue;
     public DialogueTriggerTwo dialogueTwo;
+    public DialogueTriggerThree dialogueThree;
+    public DialogueTriggerFour dialogueFour;
+    public DialogueTriggerFive dialogueFive;
+    public DialogueTriggerSix dialogueSix;
 
     public Item item;
     public Item itemTwo;
@@ -23,8 +27,14 @@ public class Crafter : Interactable
     public InventorySlot four;
     public InventorySlot five;
 
-    private bool objectiveOne = false;
+    /*private bool objectiveOne = false;
     private bool objectiveTwo = false;
+    private bool objectiveThree = false;
+    private bool objectiveFour = false;
+    private bool objectiveFive = false;
+    private bool objectiveSix = false;
+    private bool objectiveSeven = false;
+    private bool objectiveEight = false;*/
 
 
     public override void Interact()
@@ -76,6 +86,10 @@ public class Crafter : Interactable
 
                 one.AddItem(item);
                 Inventory.instance.Add(item);
+
+                dialogue.TriggerDialogue();
+                dialogueBox.SetActive(true);
+
             }
 
 
@@ -104,6 +118,9 @@ public class Crafter : Interactable
 
                 one.AddItem(itemTwo);
                 Inventory.instance.Add(itemTwo);
+
+                dialogueTwo.TriggerDialogue();
+                dialogueBox.SetActive(true);
             }
 
 
@@ -136,7 +153,7 @@ public class Crafter : Interactable
                 //objectiveOne = true;
                // objectiveTwo = false;
 
-                dialogueTwo.TriggerDialogue();
+                dialogueThree.TriggerDialogue();
                 dialogueBox.SetActive(true);
 
             }
@@ -168,6 +185,9 @@ public class Crafter : Interactable
 
                 one.AddItem(itemFour);
                 Inventory.instance.Add(itemFour);
+
+                dialogueFour.TriggerDialogue();
+                dialogueBox.SetActive(true);
             }
 
 
@@ -196,6 +216,9 @@ public class Crafter : Interactable
 
                 one.AddItem(itemFive);
                 Inventory.instance.Add(itemFive);
+
+                dialogueFive.TriggerDialogue();
+                dialogueBox.SetActive(true);
             }
 
 
@@ -224,6 +247,9 @@ public class Crafter : Interactable
 
                 one.AddItem(itemSix);
                 Inventory.instance.Add(itemSix);
+
+                dialogueSix.TriggerDialogue();
+                dialogueBox.SetActive(true);
             }
 
 

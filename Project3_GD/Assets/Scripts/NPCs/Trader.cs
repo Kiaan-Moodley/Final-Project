@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Trader : Interactable
 {
-    //public GameObject dialogueBox;
+    public GameObject dialogueBox;
+    public DTriggerTrader d1;
+    public Dt2 d2;
+    public Dt3 d3;
 
     //public DialogueTrigger dialogue;
 
@@ -26,9 +29,17 @@ public class Trader : Interactable
         TalkingToTwo();
         TalkingToThree();
 
+        //if(objectiveOne == false)
+        //{
         //dialogue.TriggerDialogue();
-        //dialogueBox.SetActive(true);
+        // dialogueBox.SetActive(true);
+        //}
 
+        //if (objectiveOne == true && objectiveTwo == false)
+        //{
+        //ialogueTwo.TriggerDialogue();
+        //dialogueBox.SetActive(true);
+        //}
     }
 
     void TalkingTo()
@@ -52,6 +63,9 @@ public class Trader : Interactable
 
                 one.AddItem(item);
                 Inventory.instance.Add(item);
+
+                d1.TriggerDialogue();
+                dialogueBox.SetActive(true);
             }
 
 
@@ -81,6 +95,9 @@ public class Trader : Interactable
 
                 one.AddItem(itemTwo);
                 Inventory.instance.Add(itemTwo);
+
+                d2.TriggerDialogue();
+                dialogueBox.SetActive(true);
             }
 
 
@@ -110,6 +127,9 @@ public class Trader : Interactable
 
                 one.AddItem(itemThree);
                 Inventory.instance.Add(itemThree);
+
+                d3.TriggerDialogue();
+                dialogueBox.SetActive(true);
             }
 
 
