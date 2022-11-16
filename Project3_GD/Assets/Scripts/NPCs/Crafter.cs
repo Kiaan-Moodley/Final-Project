@@ -8,7 +8,8 @@ public class Crafter : Interactable
     public GameObject dialogueBox;
 
     public DialogueTrigger dialogue;
-    //bool isT = false;
+    public DialogueTriggerTwo dialogueTwo;
+
     public Item item;
     public Item itemTwo;
     public Item itemThree;
@@ -22,10 +23,10 @@ public class Crafter : Interactable
     public InventorySlot four;
     public InventorySlot five;
 
-    public void Awake()
-    {
-        dialogueBox.SetActive(false);
-    }
+    private bool objectiveOne = false;
+    private bool objectiveTwo = false;
+
+
     public override void Interact()
     {
         base.Interact();
@@ -36,19 +37,20 @@ public class Crafter : Interactable
             TalkingToFour();
             TalkingToFive();
             TalkingToSix();
-        
-    }
 
-   /* public void Update()
-    {
-        if (isT == true)
-        {
-            dialogue.TriggerDialogue();
-            dialogueBox.SetActive(true);
-        }
-        else
-            dialogueBox.SetActive(false);
-    }*/
+        //if(objectiveOne == false)
+        //{
+            //dialogue.TriggerDialogue();
+           // dialogueBox.SetActive(true);
+        //}
+
+        //if (objectiveOne == true && objectiveTwo == false)
+        //{
+            //ialogueTwo.TriggerDialogue();
+            //dialogueBox.SetActive(true);
+        //}
+
+    }
 
     void TalkingTo()
     {
@@ -63,6 +65,8 @@ public class Crafter : Interactable
             if (Inventory.instance.CheckToMakeMushroomStew() == true)
             {
                 Inventory.instance.RemoveFromInventory();
+
+
 
                 one.ClearSlot();
                 two.ClearSlot();
@@ -115,7 +119,6 @@ public class Crafter : Interactable
 
             Inventory.instance.CheckWood();
 
-
             if (Inventory.instance.CheckToMakeWoodenPlank() == true)
             {
 
@@ -130,13 +133,17 @@ public class Crafter : Interactable
                 one.AddItem(itemThree);
                 Inventory.instance.Add(itemThree);
 
+                //objectiveOne = true;
+               // objectiveTwo = false;
+
+                dialogueTwo.TriggerDialogue();
+                dialogueBox.SetActive(true);
+
             }
 
 
 
         }
-       
-        
 
     }
 

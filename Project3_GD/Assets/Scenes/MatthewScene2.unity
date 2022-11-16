@@ -5405,7 +5405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &840297715
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5422,10 +5422,10 @@ RectTransform:
   m_Father: {fileID: 1335602791}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 402, y: 118}
-  m_SizeDelta: {x: 85.1053, y: 48.4537}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -48.350006, y: -35.39}
+  m_SizeDelta: {x: 85.105286, y: 48.453705}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &840297716
 MonoBehaviour:
@@ -5473,7 +5473,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2002052085}
         m_TargetAssemblyTypeName: Dialoguesys, Assembly-CSharp
-        m_MethodName: DisplayNextSentence
+        m_MethodName: closeDia
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6458,13 +6458,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc6edb9f98b23f14c93b098692d5a407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue1:
-    name: 'Creg the Crafter '
+  dialogue:
+    name: Crafter
     sentences:
-    - Test
-  dialogue2:
-    name: Madox
-    sentences: []
+    - Hello
+    - How are you
+--- !u!114 &981217979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981217972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4bfd03e2126e2e4e9c1630c0f618603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Crafter
+    sentences:
+    - Thank you for the wood
+    - Here is a plank
 --- !u!1001 &983123277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8185,7 +8200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1335602791
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11614,10 +11629,10 @@ RectTransform:
   m_Father: {fileID: 1335602791}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 402, y: -126}
-  m_SizeDelta: {x: 85.1053, y: 48.4537}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -48.350006, y: 31}
+  m_SizeDelta: {x: 85.105286, y: 48.453705}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1881742295
 MonoBehaviour:
@@ -12518,7 +12533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6651feae1de9d9645b7acfdacf97b871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 0}
+  dialogueBox: {fileID: 1335602790}
   nameText: {fileID: 1404509214}
   dialogueText: {fileID: 147173204}
 --- !u!4 &2005255922 stripped
@@ -13790,7 +13805,7 @@ PrefabInstance:
     - target: {fileID: 812967532967609802, guid: 44eaa69c5b346b343ac94893e25bfd01, type: 3}
       propertyPath: dialogue
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 981217973}
     - target: {fileID: 812967532967609802, guid: 44eaa69c5b346b343ac94893e25bfd01, type: 3}
       propertyPath: dialogueBox
       value: 
@@ -14138,6 +14153,10 @@ PrefabInstance:
       propertyPath: dialogueBox
       value: 
       objectReference: {fileID: 1335602790}
+    - target: {fileID: 1441771702264714344, guid: 8190d060c2ed9c9469453f0fab18ac52, type: 3}
+      propertyPath: dialogueTwo
+      value: 
+      objectReference: {fileID: 981217979}
     - target: {fileID: 1441771702264714344, guid: 8190d060c2ed9c9469453f0fab18ac52, type: 3}
       propertyPath: dialogue.name
       value: Craig the Crafter

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Trader : Interactable
 {
-    public GameObject dialogueBox;
+    //public GameObject dialogueBox;
 
-    public DialogueTrigger dialogue;
+    //public DialogueTrigger dialogue;
 
     public Item item;
     public Item itemTwo;
@@ -26,8 +26,8 @@ public class Trader : Interactable
         TalkingToTwo();
         TalkingToThree();
 
-        dialogue.TriggerDialogue();
-        dialogueBox.SetActive(true);
+        //dialogue.TriggerDialogue();
+        //dialogueBox.SetActive(true);
 
     }
 
