@@ -8,10 +8,12 @@ public class StartMenue : MonoBehaviour
 
    public GameObject credit;
 
+    public GameObject Controls;
 
     public void Start()
     {
         credit.SetActive(false);
+        Controls.SetActive(false);
     }
 
 
@@ -29,6 +31,14 @@ public class StartMenue : MonoBehaviour
     }
 
 
+    public void cont()
+    {
+        Controls.SetActive(true);
+    }
+    public void closeCont()
+    {
+        Controls.SetActive(false);
+    }
     public void closeCredits()
     {
         credit.SetActive(false);
