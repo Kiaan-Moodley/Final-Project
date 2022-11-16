@@ -1,71 +1,116 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 public class Dialoguesys : MonoBehaviour
 {
-    //https://www.youtube.com/watch?v=8oTYabhj248
+    /*https://www.youtube.com/watch?v=8oTYabhj248
 
-    public TextMeshProUGUI textComponent;
+     public TextMeshProUGUI textComponent;
 
-    public string[] lines;
-    public float textspeed;
+     public string[] lines;
+     public float textspeed;
 
-    private int index;
+     private int index;
 
-     void Start()
+      void Start()
+     {
+         textComponent.text = string.Empty;
+         startDialogue();
+     }
+
+      void Update()
+     {
+         if (Input.GetMouseButtonDown(0))
+         {
+             if(textComponent.text == lines[index])
+             {
+                 nextLIne();
+
+             }
+             else
+             {
+                 StopAllCoroutines();
+                 textComponent.text = lines[index];
+             }
+         }
+     }
+
+
+     void startDialogue()
+     {
+         index = 0;
+         StartCoroutine(typeLine());
+     }
+
+     IEnumerator typeLine()
+     {
+         //type each character 1 by 1
+         foreach (char c in lines[index].ToCharArray())
+         {
+             textComponent.text += c;
+             yield return new WaitForSeconds(textspeed);
+         }
+     }
+
+     void nextLIne()
+     {
+         if(index <  lines.Length - 1)
+         {
+             index++;
+             textComponent.text = string.Empty;
+             StartCoroutine(typeLine());
+         }
+     else
+         {
+             gameObject.SetActive(false);
+         }
+     }
+    */
+    private Queue<string> sentences;
+    public GameObject Panel;
+    public TextMeshProUGUI nameTxt;
+    public TextMeshProUGUI DialogueTxt;
+
+    private void Start()
     {
-        textComponent.text = string.Empty;
-        startDialogue();
+        sentences = new Queue<string>();
+        nameTxt = GetComponent<TextMeshProUGUI>();
+        DialogueTxt = GetComponent<TextMeshProUGUI>();
     }
 
-     void Update()
+    public void StartDialogue(Dialogue dialogue)
     {
-        if (Input.GetMouseButtonDown(0))
+        Panel.SetActive(true);
+        Debug.Log("Starting convo with ");
+        nameTxt.text = dialogue.name;
+        sentences.Clear();
+        foreach (string sentence in dialogue.sentences)
         {
-            if(textComponent.text == lines[index])
-            {
-                nextLIne();
+            sentences.Enqueue(sentence);
 
-            }
-            else
-            {
-                StopAllCoroutines();
-                textComponent.text = lines[index];
-            }
         }
+
+        DisplayNextSentence();
     }
 
-
-    void startDialogue()
+    public void DisplayNextSentence()
     {
-        index = 0;
-        StartCoroutine(typeLine());
+        if(sentences.Count == 0)
+        {
+            EndDialogue();
+            return;
+        }
+
+        string sentence = sentences.Dequeue();
+        Debug.Log(sentence);
+        DialogueTxt.text = sentence;
     }
 
-    IEnumerator typeLine()
+    public void EndDialogue()
     {
-        //type each character 1 by 1
-        foreach (char c in lines[index].ToCharArray())
-        {
-            textComponent.text += c;
-            yield return new WaitForSeconds(textspeed);
-        }
+        Panel.SetActive(false);
+        Debug.Log("end convo");
     }
-
-    void nextLIne()
-    {
-        if(index <  lines.Length - 1)
-        {
-            index++;
-            textComponent.text = string.Empty;
-            StartCoroutine(typeLine());
-        }
-    else
-        {
-            gameObject.SetActive(false);
-        }
-    }
-
-
 }

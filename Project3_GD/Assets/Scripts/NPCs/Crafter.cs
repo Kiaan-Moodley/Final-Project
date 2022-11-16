@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Crafter : Interactable
 {
+    public DialogueTrigger trig;
     public Item item;
     public Item itemTwo;
     public Item itemThree;
@@ -21,23 +22,33 @@ public class Crafter : Interactable
     {
         base.Interact();
 
-        TalkingTo();
-        TalkingToTwo();
-        TalkingToThree();
-        TalkingToFour();
-        TalkingToFive();
-        TalkingToSix();
+            trig.TriggerDialogue();
+            TalkingTo();
+            TalkingToTwo();
+            TalkingToThree();
+            TalkingToFour();
+            TalkingToFive();
+            TalkingToSix();
+        
 
     }
 
+    /*public void TriggerDialogue()
+    {
+       
+            FindObjectOfType<Dialoguesys>().StartDialogue(dialogue);
+        
+    }*/
+
+
     void TalkingTo()
     {
-
 
         bool hasFiveItems = Inventory.instance.CheckItem();
 
         if (hasFiveItems == true)
         {
+            
             Inventory.instance.CheckMushrooms();
 
             if (Inventory.instance.CheckToMakeMushroomStew() == true)
@@ -61,7 +72,6 @@ public class Crafter : Interactable
 
     void TalkingToTwo()
     {
-
 
         bool hasFiveItems = Inventory.instance.CheckItem();
 
@@ -90,10 +100,8 @@ public class Crafter : Interactable
 
     void TalkingToThree()
     {
-
-
+        
         bool hasFiveItems = Inventory.instance.CheckItem();
-
         if (hasFiveItems == true)
         {
             Inventory.instance.CheckWood();
@@ -110,6 +118,7 @@ public class Crafter : Interactable
 
                 one.AddItem(itemThree);
                 Inventory.instance.Add(itemThree);
+                
             }
 
 
@@ -119,7 +128,6 @@ public class Crafter : Interactable
 
     void TalkingToFour()
     {
-
 
         bool hasFiveItems = Inventory.instance.CheckItem();
 
@@ -149,7 +157,6 @@ public class Crafter : Interactable
     void TalkingToFive()
     {
 
-
         bool hasFiveItems = Inventory.instance.CheckItem();
 
         if (hasFiveItems == true)
@@ -177,7 +184,6 @@ public class Crafter : Interactable
 
     void TalkingToSix()
     {
-
 
         bool hasFiveItems = Inventory.instance.CheckItem();
 
