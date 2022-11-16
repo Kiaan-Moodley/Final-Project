@@ -67,7 +67,10 @@ public class Dialoguesys : MonoBehaviour
              gameObject.SetActive(false);
          }
      }
-    */
+    *
+    *
+    *
+    *
     private Queue<string> sentences;
     public GameObject Panel;
     public TextMeshProUGUI nameTxt;
@@ -112,5 +115,46 @@ public class Dialoguesys : MonoBehaviour
     {
         Panel.SetActive(false);
         Debug.Log("end convo");
+    }
+}
+*/
+
+    public Queue<string> Sentences;
+
+    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI dialogueText;
+    void Start()
+    {
+        Sentences = new Queue<string>();
+    }
+
+    public void StartDialogue(Dialogue dialogue)
+    {
+        nameText.text = dialogue.name;
+
+        Sentences.Clear();
+
+        foreach (string sentence in dialogue.sentences)
+        {
+            Sentences.Enqueue(sentence);
+        }
+        DisplayNextSentence();
+    }
+
+    public void DisplayNextSentence()
+    {
+        if (Sentences.Count == 0)
+        {
+            EndDialogue();
+            return;
+        }
+
+        string sentence = Sentences.Dequeue();
+        dialogueText.text = sentence;
+    }
+
+    void EndDialogue()
+    {
+        Debug.Log("End of conversation");
     }
 }
