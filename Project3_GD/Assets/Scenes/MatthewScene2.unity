@@ -6178,8 +6178,8 @@ MonoBehaviour:
   dialogue:
     name: Creg the Crafter
     sentences:
-    - Test1
-    - Test 2
+    - Kiaan Smells
+    - Go shower
 --- !u!1001 &983123277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11963,9 +11963,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6651feae1de9d9645b7acfdacf97b871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Panel: {fileID: 1335602790}
-  nameTxt: {fileID: 1404509214}
-  DialogueTxt: {fileID: 147173204}
+  nameText: {fileID: 1404509214}
+  dialogueText: {fileID: 147173204}
 --- !u!4 &2005255922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6432737090649552061, guid: 20e3980757c081247b3f0f8540466eb6, type: 3}
@@ -13220,6 +13219,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1473420025}
     - target: {fileID: 812967532967609802, guid: 44eaa69c5b346b343ac94893e25bfd01, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 812967532967609802, guid: 44eaa69c5b346b343ac94893e25bfd01, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 1335602790}
+    - target: {fileID: 812967532967609802, guid: 44eaa69c5b346b343ac94893e25bfd01, type: 3}
       propertyPath: dialogue.name
       value: Terry the Trader
       objectReference: {fileID: 0}
@@ -13554,6 +13561,14 @@ PrefabInstance:
       propertyPath: storage
       value: 
       objectReference: {fileID: 1473420025}
+    - target: {fileID: 1441771702264714344, guid: 8190d060c2ed9c9469453f0fab18ac52, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 981217973}
+    - target: {fileID: 1441771702264714344, guid: 8190d060c2ed9c9469453f0fab18ac52, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 1335602790}
     - target: {fileID: 1441771702264714344, guid: 8190d060c2ed9c9469453f0fab18ac52, type: 3}
       propertyPath: dialogue.name
       value: Craig the Crafter

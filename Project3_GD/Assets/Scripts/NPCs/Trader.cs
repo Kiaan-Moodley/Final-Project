@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Trader : Interactable
 {
-    //public Dialogue dialogue;
+    public GameObject dialogueBox;
+
+    public DialogueTrigger dialogue;
+
     public Item item;
     public Item itemTwo;
     public Item itemThree;
@@ -18,21 +21,19 @@ public class Trader : Interactable
     public override void Interact()
     {
         base.Interact();
+
         TalkingTo();
         TalkingToTwo();
         TalkingToThree();
-      
-    }
 
-   /* public void TriggerDialogue()
-    {
-        FindObjectOfType<Dialoguesys>().StartDialogue(dialogue);
-    }*/
+        dialogue.TriggerDialogue();
+        dialogueBox.SetActive(true);
+
+    }
 
     void TalkingTo()
     {
 
-       // TriggerDialogue();
         bool hasFiveItems = Inventory.instance.CheckItem();
 
         if (hasFiveItems == true)

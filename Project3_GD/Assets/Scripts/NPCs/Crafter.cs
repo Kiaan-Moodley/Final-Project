@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Crafter : Interactable
 {
-    public DialogueTrigger trig;
+
+    public GameObject dialogueBox;
+
+    public DialogueTrigger dialogue;
+
     public Item item;
     public Item itemTwo;
     public Item itemThree;
@@ -22,24 +26,18 @@ public class Crafter : Interactable
     {
         base.Interact();
 
-            trig.TriggerDialogue();
             TalkingTo();
             TalkingToTwo();
             TalkingToThree();
             TalkingToFour();
             TalkingToFive();
             TalkingToSix();
-        
+
+        dialogue.TriggerDialogue();
+        dialogueBox.SetActive(true);
+
 
     }
-
-    /*public void TriggerDialogue()
-    {
-       
-            FindObjectOfType<Dialoguesys>().StartDialogue(dialogue);
-        
-    }*/
-
 
     void TalkingTo()
     {
