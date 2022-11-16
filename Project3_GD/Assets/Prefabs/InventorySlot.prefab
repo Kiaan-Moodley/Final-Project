@@ -410,7 +410,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d952100e261daa94d84147764076a520, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc09c6a933b70f043a00ede34c8d1014, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -530,5 +530,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 8734938694900716470}
   storage: {fileID: 0}
+  slot: {fileID: 0}
   removeButton: {fileID: 8734938695415399252}
   AddButton: {fileID: 7063687560261709256}

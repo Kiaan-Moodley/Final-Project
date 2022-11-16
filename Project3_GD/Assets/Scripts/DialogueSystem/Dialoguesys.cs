@@ -121,6 +121,8 @@ public class Dialoguesys : MonoBehaviour
 
     public Queue<string> Sentences;
 
+
+    public GameObject dialogueBox;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     void Start()
@@ -145,16 +147,20 @@ public class Dialoguesys : MonoBehaviour
     {
         if (Sentences.Count == 0)
         {
-            EndDialogue();
             return;
+        }
+        else if (Sentences.Count == Sentences.Count-1)
+        {
+            closeDia();
         }
 
         string sentence = Sentences.Dequeue();
         dialogueText.text = sentence;
     }
 
-    void EndDialogue()
+    public void closeDia()
     {
-        Debug.Log("End of conversation");
+
+        dialogueBox.SetActive(false);
     }
 }

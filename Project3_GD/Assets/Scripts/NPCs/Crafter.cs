@@ -8,7 +8,7 @@ public class Crafter : Interactable
     public GameObject dialogueBox;
 
     public DialogueTrigger dialogue;
-
+    //bool isT = false;
     public Item item;
     public Item itemTwo;
     public Item itemThree;
@@ -22,6 +22,10 @@ public class Crafter : Interactable
     public InventorySlot four;
     public InventorySlot five;
 
+    public void Awake()
+    {
+        dialogueBox.SetActive(false);
+    }
     public override void Interact()
     {
         base.Interact();
@@ -32,16 +36,23 @@ public class Crafter : Interactable
             TalkingToFour();
             TalkingToFive();
             TalkingToSix();
-
-        dialogue.TriggerDialogue();
-        dialogueBox.SetActive(true);
-
-
+        
     }
+
+   /* public void Update()
+    {
+        if (isT == true)
+        {
+            dialogue.TriggerDialogue();
+            dialogueBox.SetActive(true);
+        }
+        else
+            dialogueBox.SetActive(false);
+    }*/
 
     void TalkingTo()
     {
-
+       
         bool hasFiveItems = Inventory.instance.CheckItem();
 
         if (hasFiveItems == true)
@@ -98,14 +109,16 @@ public class Crafter : Interactable
 
     void TalkingToThree()
     {
-        
         bool hasFiveItems = Inventory.instance.CheckItem();
         if (hasFiveItems == true)
         {
+
             Inventory.instance.CheckWood();
+
 
             if (Inventory.instance.CheckToMakeWoodenPlank() == true)
             {
+
                 Inventory.instance.RemoveFromInventory();
 
                 one.ClearSlot();
@@ -116,11 +129,14 @@ public class Crafter : Interactable
 
                 one.AddItem(itemThree);
                 Inventory.instance.Add(itemThree);
-                
+
             }
 
 
+
         }
+       
+        
 
     }
 
